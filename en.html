@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kastanie — Plant Care Service Vienna</title>
+<meta name="description" content="Free photo diagnosis for your houseplants. Starting this winter, we arrange at-home plant check-ups in Vienna.">
+<link rel="alternate" hreflang="de-AT" href="https://kastanie.wien/">
+<link rel="alternate" hreflang="en" href="https://kastanie.wien/en.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta name="theme-color" content="#2D5537">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAF9F4;
+  --paper-deep:#F1EFE6;
+  --forest:#2D5537;
+  --forest-deep:#1E3A25;
+  --taupe:#9C8F7D;
+  --ink:#2B3128;
+  --muted:#6E6A5F;
+  --line:#DFDBCE;
+  --measure:34rem;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,sans-serif;
+  font-size:1.0625rem;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{width:100%;max-width:var(--measure);margin:0 auto;padding:0 1.5rem;}
+h1,h2{font-family:"Playfair Display",Georgia,serif;font-weight:600;line-height:1.16;letter-spacing:-0.005em;margin:0;color:var(--forest-deep);}
+h1{font-size:clamp(2.1rem,7vw,3rem);}
+h2{font-size:clamp(1.5rem,4.5vw,1.85rem);margin-bottom:1rem;}
+h3{font-size:1.0625rem;font-family:"IBM Plex Sans",sans-serif;font-weight:600;margin:0 0 .25rem;color:var(--forest-deep);}
+p{margin:0 0 1.1rem;}
+a{color:var(--forest);}
+strong{font-weight:600;}
+
+/* letterspaced taupe caps — the device borrowed from the logo */
+.eyebrow{
+  font-size:.6875rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--taupe);font-weight:600;margin-bottom:1.5rem;
+}
+
+.band{padding:3.5rem 0;border-top:1px solid var(--line);}
+.band--hero{padding:2.5rem 0 3.25rem;border-top:none;}
+.band--quiet{background:var(--paper-deep);}
+.lede{font-size:1.15rem;color:var(--muted);}
+
+/* masthead lockup: mark + live text, so alignment and legibility are exact */
+.masthead{padding:2.25rem 0 0;}
+.masthead .wrap{display:flex;align-items:center;justify-content:space-between;}
+.lang-toggle{font-size:.8125rem;font-weight:600;letter-spacing:.08em;color:var(--taupe);text-decoration:none;border:1px solid var(--line);border-radius:2px;padding:.35rem .7rem;}
+.lang-toggle:hover{color:var(--forest);border-color:var(--forest);}
+
+.lockup{display:inline-flex;align-items:center;gap:.75rem;text-decoration:none;}
+.lockup-mark{height:56px;width:auto;display:block;}
+.lockup-text{font-family:"Playfair Display",Georgia,serif;font-size:1.6rem;font-weight:600;color:var(--forest-deep);line-height:1;}
+.lockup-text span{
+  display:block;margin-top:.35rem;
+  font-family:"IBM Plex Sans",sans-serif;font-size:.625rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--taupe);
+}
+
+/* signature: light measurement chart */
+.light{margin:2.75rem 0 2rem;}
+.light-cap{font-size:.8125rem;color:var(--muted);margin-bottom:1.25rem;}
+.chart{display:flex;gap:.5rem;align-items:flex-end;}
+.col{flex:1;min-width:0;}
+.bararea{height:150px;display:flex;align-items:flex-end;}
+.bar{
+  width:100%;min-height:3px;background:var(--forest);border-radius:1px 1px 0 0;
+  transform-origin:bottom;animation:grow .85s cubic-bezier(.2,.7,.3,1) both;
+}
+.col:nth-child(2) .bar{animation-delay:.1s;}
+.col:nth-child(3) .bar{animation-delay:.2s;}
+.col:nth-child(4) .bar{animation-delay:.3s;}
+@keyframes grow{from{transform:scaleY(0);}to{transform:scaleY(1);}}
+.luxval{
+  font-size:.75rem;font-weight:600;color:var(--forest-deep);
+  padding-top:.5rem;border-top:1px solid var(--line);margin-top:.4rem;
+}
+.luxname{font-size:.6875rem;line-height:1.35;color:var(--muted);margin-top:.15rem;}
+.light-note{font-size:.8125rem;color:var(--muted);margin-top:1.25rem;}
+.light-note b{color:var(--forest);font-weight:600;}
+.light-src{font-size:.6875rem;color:var(--taupe);margin-top:.5rem;}
+
+/* buttons */
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem;}
+.btn{
+  display:inline-block;padding:.85rem 1.5rem;border-radius:2px;
+  font-size:.9375rem;font-weight:600;text-decoration:none;
+  border:1px solid var(--forest);transition:background .18s ease,color .18s ease;
+}
+.btn--solid{background:var(--forest);color:var(--paper);}
+.btn--solid:hover{background:var(--forest-deep);border-color:var(--forest-deep);}
+.btn--ghost{background:transparent;color:var(--forest);}
+.btn--ghost:hover{background:var(--forest);color:var(--paper);}
+:focus-visible{outline:2px solid var(--taupe);outline-offset:3px;}
+
+/* reasons */
+.reasons{margin:1.75rem 0 0;padding:0;list-style:none;}
+.reasons li{padding:1.1rem 0;border-top:1px solid var(--line);}
+.reasons li:last-child{border-bottom:1px solid var(--line);}
+.reasons p{margin:0;color:var(--muted);font-size:.9375rem;}
+
+/* English aside — uses the same taupe label device as .eyebrow */
+.en{
+  font-size:.9375rem;color:var(--muted);
+  border-top:1px solid var(--line);padding-top:1.1rem;margin-top:1.5rem;
+}
+.en span{
+  display:inline-block;margin-right:.6rem;
+  font-size:.6875rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--taupe);font-weight:600;vertical-align:.08em;
+}
+
+.callout{border-left:3px solid var(--taupe);padding:.25rem 0 .25rem 1.25rem;margin:1.75rem 0;}
+.callout p:last-child{margin-bottom:0;}
+.mail{font-weight:600;color:var(--forest);word-break:break-all;}
+
+/* form */
+.formbox{margin-top:1.5rem;}
+.field{margin-bottom:1.1rem;}
+label{display:block;font-size:.875rem;font-weight:500;margin-bottom:.35rem;}
+input[type=email],select{
+  width:100%;padding:.7rem .8rem;font:inherit;font-size:.9375rem;
+  background:var(--paper);color:var(--ink);
+  border:1px solid var(--line);border-radius:2px;
+}
+.hint{font-size:.8125rem;color:var(--muted);margin:-.5rem 0 1.1rem;}
+
+/* about */
+.about{display:flex;gap:1.25rem;align-items:flex-start;margin-top:1.5rem;}
+.portrait{
+  width:88px;height:88px;flex-shrink:0;border-radius:2px;object-fit:cover;
+  background:var(--paper-deep);border:1px solid var(--line);
+}
+
+.foot{padding:2.5rem 0 3.5rem;border-top:1px solid var(--line);font-size:.8125rem;color:var(--muted);}
+.foot p{margin-bottom:.6rem;}
+.foot a{color:var(--muted);}
+
+.hero-illu{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:2px;margin:1.75rem 0 0;}
+.mascot{width:88px;height:auto;float:right;margin:-.25rem 0 .5rem 1rem;}
+@media (max-width:480px){.mascot{width:68px;}}
+.rise{opacity:0;transform:translateY(12px);animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards;}
+.rise:nth-child(2){animation-delay:.08s;}
+.rise:nth-child(3){animation-delay:.16s;}
+@keyframes rise{to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){
+  .rise{animation:none;opacity:1;transform:none;}
+  *{transition:none !important;}
+}
+
+@media (max-width:480px){
+  .lockup-mark{height:46px;}
+  .lockup-text{font-size:1.35rem;}
+  .bararea{height:120px;}
+  .luxval{font-size:.6875rem;}
+  .luxname{font-size:.625rem;}
+  .about{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="lockup" href="/">
+      <img class="lockup-mark" src="mark.png" alt="" onerror="this.style.display='none'">
+      <span class="lockup-text">Kastanie<span>Pflanzenservice Wien</span></span>
+    </a>
+    <a class="lang-toggle" href="index.html" lang="de" hreflang="de-AT">Deutsch</a>
+  </div>
+</header>
+
+<section class="band band--hero">
+  <div class="wrap">
+    <h1 class="rise">No green thumb?<br>Most of the time,<br>it isn&rsquo;t you.</h1>
+    <img class="hero-illu rise" src="img/plant-journey.jpg" width="1600" height="479" alt="Illustration: the same plant in three places — flowering in a greenhouse at 30,000 lux, still fine at an apartment window at 3,000 lux, drooping on a shelf at 200 lux." loading="eager">
+
+
+    <div class="light rise">
+      <p class="light-cap">How much light your plant had <strong>at the nursery</strong> — and how much of it reaches it <strong>in your apartment</strong>:</p>
+
+      <div class="chart" role="img" aria-label="Bar chart: around 30,000 lux in the greenhouse, around 3,000 lux at a bright window, around 800 lux one metre into the room, around 200 lux in the middle of the room.">
+        <div class="col">
+          <div class="bararea"><div class="bar" style="height:100%"></div></div>
+          <p class="luxval">ca. 30.000 lx</p>
+          <p class="luxname">Greenhouse<br>where it grew up</p>
+        </div>
+        <div class="col">
+          <div class="bararea"><div class="bar" style="height:10%"></div></div>
+          <p class="luxval">ca. 3.000 lx</p>
+          <p class="luxname">Bright window<br>at your home</p>
+        </div>
+        <div class="col">
+          <div class="bararea"><div class="bar" style="height:2.7%"></div></div>
+          <p class="luxval">ca. 800 lx</p>
+          <p class="luxname">1 metre further<br>into the room</p>
+        </div>
+        <div class="col">
+          <div class="bararea"><div class="bar" style="height:0.7%"></div></div>
+          <p class="luxval">ca. 200 lx</p>
+          <p class="luxname">Middle of the room<br>the shelf, the dresser</p>
+        </div>
+      </div>
+
+      <p class="light-note">Your plant spent its entire life so far in the first bar. The day you took it home, it moved to the second — or the fourth. <b>That is the most common reason plants give up after purchase.</b></p>
+      <p class="light-src">Approximate values. Actual readings vary considerably with season, orientation and window size.</p>
+    </div>
+
+    <p class="lede rise">Send us a photo of your plant. We&rsquo;ll take a look and tell you what&rsquo;s going on. Free of charge.</p>
+
+    <div class="actions rise">
+      <a class="btn btn--solid" href="mailto:hallo@kastanie.wien?subject=Photo%20diagnosis">Send a photo</a>
+      <a class="btn btn--ghost" href="#warteliste">Join the waiting list</a>
+    </div>
+  </div>
+</section>
+
+<section class="band band--quiet">
+  <div class="wrap">
+    <p class="eyebrow">What&rsquo;s behind it</p>
+    <h2>Why your plant stopped flowering after you bought it</h2>
+
+    <ul class="reasons">
+      <li>
+        <h3>The light</h3>
+        <p>The gap between nursery and apartment is bigger than it feels. Our eyes compensate for it — plants can&rsquo;t.</p>
+      </li>
+      <li>
+        <h3>The flowers</h3>
+        <p>Commercial growers cultivate plants to be in full bloom at the moment of sale — under ideal light, warmth and feeding. At home those conditions are gone, and the plant switches to survival mode: the existing flowers finish, and no new buds appear for a while. That is normal and not a bad sign.</p>
+      </li>
+      <li>
+        <h3>The heating air</h3>
+        <p>Viennese apartments in winter are drier than almost any climate these plants come from.</p>
+      </li>
+      <li>
+        <h3>The watering</h3>
+        <p>The most common mistake isn&rsquo;t too little water but too much — usually out of concern.</p>
+      </li>
+    </ul>
+
+    <p style="margin-top:1.75rem;">Almost all of this can be fixed once you know what the cause is. And given the right conditions, most of these plants will flower again — it just rarely happens on its own.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">What we&rsquo;re building</p>
+    <h2>A plant care service for Vienna</h2>
+    <p>Kastanie is just getting started. From this winter, we arrange <strong>plant check-ups at your home</strong>: someone looks at your plants, works out what they&rsquo;re missing, repots where needed, and tells you what to do.</p>
+    <p>The work is done by <strong>Viennese nurseries</strong> — businesses that have been doing this for decades. We organise and arrange. The gardening is done by professionals.</p>
+    <p>We&rsquo;re starting small: a few partner businesses, a few districts. Hence the waiting list.</p>
+  </div>
+</section>
+
+<section class="band band--quiet">
+  <div class="wrap">
+    <p class="eyebrow">Available now, free — and staying free</p>
+    <h2>Photo diagnosis</h2>
+    <img class="mascot" src="img/kastanie-lupe.png" width="420" height="411" alt="Kastanie mascot examining a leaf with a magnifying glass" loading="lazy">
+    <p>Send a photo of your plant to <a class="mail" href="mailto:hallo@kastanie.wien?subject=Photo%20diagnosis">hallo@kastanie.wien</a>. Briefly add where it stands, how often you water, and how long the problem has existed.</p>
+
+    <div class="callout">
+      <p>Within <strong>48 hours</strong> (on working days) you&rsquo;ll get an assessment: what your plant is most likely missing and what you can concretely do.</p>
+      <p>No sales pitch. No invoice. No sign-up required.</p>
+    </div>
+
+    <p style="font-size:.9375rem;color:var(--muted);">One photo per request, please — that way we can give everyone a proper answer.</p>
+
+    <p class="en" lang="de"><span>Deutsch</span> Wir antworten selbstverständlich auch auf Deutsch — schicken Sie Ihr Foto einfach an dieselbe Adresse.</p>
+  </div>
+</section>
+
+<section class="band" id="warteliste">
+  <div class="wrap">
+    <p class="eyebrow">Waiting list</p>
+    <h2>We&rsquo;ll get in touch when we launch in your district</h2>
+    <p>No newsletter, no advertising. One email when we launch.</p>
+
+    <!-- ============================================================
+         FORM SLOT — replace everything between these comments with
+         your Tally embed code. Until then the fields are display-only
+         and the mail button underneath does the job.
+         ============================================================ -->
+    <div class="formbox">
+      <div class="field">
+        <label for="email">Email address</label>
+        <input id="email" type="email" placeholder="your@address.at" disabled>
+      </div>
+      <div class="field">
+        <label for="bezirk">District</label>
+        <select id="bezirk" disabled><option>Please choose</option></select>
+      </div>
+      <div class="field">
+        <label for="anzahl">Roughly how many houseplants do you have?</label>
+        <select id="anzahl" disabled><option>1–5 · 6–15 · 16–30 · more than 30</option></select>
+      </div>
+      <p class="hint">The form is being set up — until then, just write to us directly:</p>
+      <a class="btn btn--solid" href="mailto:hallo@kastanie.wien?subject=Waiting%20list&body=District:%20%0ANumber%20of%20plants:%20">Join the waiting list by email</a>
+    </div>
+    <!-- ==================== END FORM SLOT ==================== -->
+
+  </div>
+</section>
+
+<section class="band band--quiet">
+  <div class="wrap">
+    <p class="eyebrow">Who&rsquo;s behind this</p>
+    <div class="about">
+      <div>
+        <p>I live in Vienna and I&rsquo;m building Kastanie — alongside my day job, step by step.</p>
+        <p>The idea came from a conversation I keep having: someone buys a plant, it looks great for two weeks, then goes downhill — and they conclude they&rsquo;re just not good at this. Yet Vienna has outstanding nurseries that could solve exactly this. It simply doesn&rsquo;t occur to anyone to invite them home.</p>
+        <p style="margin-bottom:0;">I&rsquo;m not a gardener myself. The work on your plants is done by trained Viennese businesses — and for tricky cases, I check with them before I answer you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot" id="impressum">
+  <div class="wrap">
+    <p><strong>Impressum / legal disclosure (§ 5 ECG, § 14 UGB, § 25 MedienG)</strong> — provided in German as the legally binding version:</p>
+    <p><strong>Kastanie e.U.</strong><br>
+    Inhaber: Suman Rathod<br>
+    Dr.-Eduard-Heinl-Gasse 5/6/3, 1190 Wien<br>
+    <a href="mailto:hallo@kastanie.wien">hallo@kastanie.wien</a></p>
+    <p>Firmenbuchnummer: [FN folgt] · Firmenbuchgericht: Handelsgericht Wien<br>
+    Unternehmensgegenstand: Vermittlung von Pflanzenpflege- und Blumen-Dienstleistungen<br>
+    Mitglied der Wirtschaftskammer Wien · Gewerbeordnung: <a href="https://www.ris.bka.gv.at" rel="noopener">ris.bka.gv.at</a> · Gewerbebehörde: Magistratisches Bezirksamt Wien</p>
+    <p>Die Pflanzen-Checks und weiteren Leistungen werden von selbständigen Wiener Partnerbetrieben erbracht; der Vertrag über die Leistung kommt zwischen Ihnen und dem jeweiligen Betrieb zustande. Kastanie vermittelt.</p>
+    <p><a href="datenschutz.html">Datenschutzerklärung (privacy policy, German)</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
