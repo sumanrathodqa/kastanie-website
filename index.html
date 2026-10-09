@@ -32,29 +32,30 @@ body{
   background:var(--paper);
   color:var(--ink);
   font-family:"IBM Plex Sans",system-ui,sans-serif;
-  font-size:1.0625rem;
+  font-size:1.125rem;
   line-height:1.65;
   -webkit-font-smoothing:antialiased;
 }
 .wrap{width:100%;max-width:var(--measure);margin:0 auto;padding:0 1.5rem;}
+.wrap--wide{max-width:76rem;}
 h1,h2{font-family:"Playfair Display",Georgia,serif;font-weight:600;line-height:1.16;letter-spacing:-0.005em;margin:0;color:var(--forest-deep);}
 h1{font-size:clamp(2.1rem,7vw,3rem);}
 h2{font-size:clamp(1.5rem,4.5vw,1.85rem);margin-bottom:1rem;}
-h3{font-size:1.0625rem;font-family:"IBM Plex Sans",sans-serif;font-weight:600;margin:0 0 .25rem;color:var(--forest-deep);}
+h3{font-size:1.125rem;font-family:"IBM Plex Sans",sans-serif;font-weight:600;margin:0 0 .25rem;color:var(--forest-deep);}
 p{margin:0 0 1.1rem;}
 a{color:var(--forest);}
 strong{font-weight:600;}
 
 /* letterspaced taupe caps — the device borrowed from the logo */
 .eyebrow{
-  font-size:.6875rem;letter-spacing:.22em;text-transform:uppercase;
+  font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;
   color:var(--taupe);font-weight:600;margin-bottom:1.5rem;
 }
 
 .band{padding:3.5rem 0;border-top:1px solid var(--line);}
 .band--hero{padding:2.5rem 0 3.25rem;border-top:none;}
 .band--quiet{background:var(--paper-deep);}
-.lede{font-size:1.15rem;color:var(--muted);}
+.lede{font-size:1.3rem;color:var(--muted);}
 
 /* masthead lockup: mark + live text, so alignment and legibility are exact */
 .masthead{padding:2.25rem 0 0;}
@@ -73,7 +74,7 @@ strong{font-weight:600;}
 
 /* signature: light measurement chart */
 .light{margin:2.75rem 0 2rem;}
-.light-cap{font-size:.8125rem;color:var(--muted);margin-bottom:1.25rem;}
+.light-cap{font-size:.9375rem;color:var(--muted);margin-bottom:1.25rem;}
 .chart{display:flex;gap:.5rem;align-items:flex-end;}
 .col{flex:1;min-width:0;}
 .bararea{height:150px;display:flex;align-items:flex-end;}
@@ -86,19 +87,19 @@ strong{font-weight:600;}
 .col:nth-child(4) .bar{animation-delay:.3s;}
 @keyframes grow{from{transform:scaleY(0);}to{transform:scaleY(1);}}
 .luxval{
-  font-size:.75rem;font-weight:600;color:var(--forest-deep);
+  font-size:.875rem;font-weight:600;color:var(--forest-deep);
   padding-top:.5rem;border-top:1px solid var(--line);margin-top:.4rem;
 }
-.luxname{font-size:.6875rem;line-height:1.35;color:var(--muted);margin-top:.15rem;}
-.light-note{font-size:.8125rem;color:var(--muted);margin-top:1.25rem;}
+.luxname{font-size:.8125rem;line-height:1.35;color:var(--muted);margin-top:.15rem;}
+.light-note{font-size:.9375rem;color:var(--muted);margin-top:1.25rem;}
 .light-note b{color:var(--forest);font-weight:600;}
-.light-src{font-size:.6875rem;color:var(--taupe);margin-top:.5rem;}
+.light-src{font-size:.8125rem;color:var(--taupe);margin-top:.5rem;}
 
 /* buttons */
 .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem;}
 .btn{
-  display:inline-block;padding:.85rem 1.5rem;border-radius:2px;
-  font-size:.9375rem;font-weight:600;text-decoration:none;
+  display:inline-block;padding:.9rem 1.6rem;border-radius:2px;
+  font-size:1.0625rem;font-weight:600;text-decoration:none;
   border:1px solid var(--forest);transition:background .18s ease,color .18s ease;
 }
 .btn--solid{background:var(--forest);color:var(--paper);}
@@ -111,11 +112,11 @@ strong{font-weight:600;}
 .reasons{margin:1.75rem 0 0;padding:0;list-style:none;}
 .reasons li{padding:1.1rem 0;border-top:1px solid var(--line);}
 .reasons li:last-child{border-bottom:1px solid var(--line);}
-.reasons p{margin:0;color:var(--muted);font-size:.9375rem;}
+.reasons p{margin:0;color:var(--muted);font-size:1.0625rem;}
 
 /* English aside — uses the same taupe label device as .eyebrow */
 .en{
-  font-size:.9375rem;color:var(--muted);
+  font-size:1.0625rem;color:var(--muted);
   border-top:1px solid var(--line);padding-top:1.1rem;margin-top:1.5rem;
 }
 .en span{
@@ -131,13 +132,13 @@ strong{font-weight:600;}
 /* form */
 .formbox{margin-top:1.5rem;}
 .field{margin-bottom:1.1rem;}
-label{display:block;font-size:.875rem;font-weight:500;margin-bottom:.35rem;}
+label{display:block;font-size:1rem;font-weight:500;margin-bottom:.35rem;}
 input[type=email],select{
   width:100%;padding:.7rem .8rem;font:inherit;font-size:.9375rem;
   background:var(--paper);color:var(--ink);
   border:1px solid var(--line);border-radius:2px;
 }
-.hint{font-size:.8125rem;color:var(--muted);margin:-.5rem 0 1.1rem;}
+.hint{font-size:.9375rem;color:var(--muted);margin:-.5rem 0 1.1rem;}
 
 /* about */
 .about{display:flex;gap:1.25rem;align-items:flex-start;margin-top:1.5rem;}
@@ -146,7 +147,7 @@ input[type=email],select{
   background:var(--paper-deep);border:1px solid var(--line);
 }
 
-.foot{padding:2.5rem 0 3.5rem;border-top:1px solid var(--line);font-size:.8125rem;color:var(--muted);}
+.foot{padding:2.5rem 0 3.5rem;border-top:1px solid var(--line);font-size:.9375rem;color:var(--muted);}
 .foot p{margin-bottom:.6rem;}
 .foot a{color:var(--muted);}
 
@@ -172,8 +173,8 @@ input[type=email],select{
   .lockup-mark{height:46px;}
   .lockup-text{font-size:1.35rem;}
   .bararea{height:120px;}
-  .luxval{font-size:.6875rem;}
-  .luxname{font-size:.625rem;}
+  .luxval{font-size:.8125rem;}
+  .luxname{font-size:.75rem;}
   .about{flex-direction:column;}
 }
 </style>
@@ -181,7 +182,7 @@ input[type=email],select{
 <body>
 
 <header class="masthead">
-  <div class="wrap">
+  <div class="wrap wrap--wide">
     <a class="lockup" href="/">
       <img class="lockup-mark" src="mark.png" alt="" onerror="this.style.display='none'">
       <span class="lockup-text">Kastanie<span>Pflanzenservice Wien</span></span>
@@ -337,7 +338,7 @@ input[type=email],select{
 </section>
 
 <footer class="foot" id="impressum">
-  <div class="wrap">
+  <div class="wrap wrap--wide">
     <p><strong>Impressum / Offenlegung (§ 5 ECG, § 14 UGB, § 25 MedienG)</strong></p>
     <p><strong>Kastanie e.U.</strong><br>
     Inhaber: Suman Rathod<br>
