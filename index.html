@@ -305,20 +305,58 @@ input[type=email],select{
          ============================================================ -->
     <div class="formbox">
       <div class="field">
-        <label for="email">E-Mail-Adresse</label>
-        <input id="email" type="email" placeholder="ihre@adresse.at" disabled>
-      </div>
-      <div class="field">
-        <label for="bezirk">Bezirk</label>
-        <select id="bezirk" disabled><option>Bitte wählen</option></select>
+        <label for="bezirk">Ihr Bezirk</label>
+        <select id="bezirk">
+          <option>Bitte wählen</option>
+          <option>1. Bezirk (1010)</option>
+          <option>2. Bezirk (1020)</option>
+          <option>3. Bezirk (1030)</option>
+          <option>4. Bezirk (1040)</option>
+          <option>5. Bezirk (1050)</option>
+          <option>6. Bezirk (1060)</option>
+          <option>7. Bezirk (1070)</option>
+          <option>8. Bezirk (1080)</option>
+          <option>9. Bezirk (1090)</option>
+          <option>10. Bezirk (1100)</option>
+          <option>11. Bezirk (1110)</option>
+          <option>12. Bezirk (1120)</option>
+          <option>13. Bezirk (1130)</option>
+          <option>14. Bezirk (1140)</option>
+          <option>15. Bezirk (1150)</option>
+          <option>16. Bezirk (1160)</option>
+          <option>17. Bezirk (1170)</option>
+          <option>18. Bezirk (1180)</option>
+          <option>19. Bezirk (1190)</option>
+          <option>20. Bezirk (1200)</option>
+          <option>21. Bezirk (1210)</option>
+          <option>22. Bezirk (1220)</option>
+          <option>23. Bezirk (1230)</option>
+        </select>
       </div>
       <div class="field">
         <label for="anzahl">Wie viele Zimmerpflanzen haben Sie ungefähr?</label>
-        <select id="anzahl" disabled><option>1–5 · 6–15 · 16–30 · mehr als 30</option></select>
+        <select id="anzahl">
+          <option>1–5</option>
+          <option>6–15</option>
+          <option>16–30</option>
+          <option>mehr als 30</option>
+        </select>
       </div>
-      <p class="hint">Formular wird gerade eingerichtet — schreiben Sie uns bis dahin einfach direkt:</p>
-      <a class="btn btn--solid" href="mailto:hallo@kastanie.wien?subject=Warteliste&body=Bezirk:%20%0AAnzahl%20Pflanzen:%20">Per E-Mail auf die Warteliste</a>
+      <p class="hint">Der Knopf öffnet Ihr E-Mail-Programm mit einer fertigen Nachricht — abgeschickt wird erst, wenn Sie selbst auf Senden drücken.</p>
+      <a class="btn btn--solid" id="wl-btn" href="mailto:hallo@kastanie.wien?subject=Warteliste">Per E-Mail auf die Warteliste</a>
     </div>
+    <script>
+    (function(){
+      function upd(){
+        var b=document.getElementById('bezirk').value, a=document.getElementById('anzahl').value;
+        document.getElementById('wl-btn').href='mailto:hallo@kastanie.wien?subject=Warteliste&body='+
+          encodeURIComponent('Bezirk: '+b+'\nAnzahl Pflanzen: '+a);
+      }
+      document.getElementById('bezirk').addEventListener('change',upd);
+      document.getElementById('anzahl').addEventListener('change',upd);
+      upd();
+    })();
+    </script>
     <!-- ==================== END FORM SLOT ==================== -->
 
   </div>

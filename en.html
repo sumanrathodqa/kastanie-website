@@ -305,20 +305,58 @@ input[type=email],select{
          ============================================================ -->
     <div class="formbox">
       <div class="field">
-        <label for="email">Email address</label>
-        <input id="email" type="email" placeholder="your@address.at" disabled>
-      </div>
-      <div class="field">
-        <label for="bezirk">District</label>
-        <select id="bezirk" disabled><option>Please choose</option></select>
+        <label for="bezirk">Your district</label>
+        <select id="bezirk">
+          <option>Please choose</option>
+          <option>1010 (1st district)</option>
+          <option>1020 (2nd district)</option>
+          <option>1030 (3rd district)</option>
+          <option>1040 (4th district)</option>
+          <option>1050 (5th district)</option>
+          <option>1060 (6th district)</option>
+          <option>1070 (7th district)</option>
+          <option>1080 (8th district)</option>
+          <option>1090 (9th district)</option>
+          <option>1100 (10th district)</option>
+          <option>1110 (11th district)</option>
+          <option>1120 (12th district)</option>
+          <option>1130 (13th district)</option>
+          <option>1140 (14th district)</option>
+          <option>1150 (15th district)</option>
+          <option>1160 (16th district)</option>
+          <option>1170 (17th district)</option>
+          <option>1180 (18th district)</option>
+          <option>1190 (19th district)</option>
+          <option>1200 (20th district)</option>
+          <option>1210 (21th district)</option>
+          <option>1220 (22th district)</option>
+          <option>1230 (23th district)</option>
+        </select>
       </div>
       <div class="field">
         <label for="anzahl">Roughly how many houseplants do you have?</label>
-        <select id="anzahl" disabled><option>1–5 · 6–15 · 16–30 · more than 30</option></select>
+        <select id="anzahl">
+          <option>1–5</option>
+          <option>6–15</option>
+          <option>16–30</option>
+          <option>more than 30</option>
+        </select>
       </div>
-      <p class="hint">The form is being set up — until then, just write to us directly:</p>
-      <a class="btn btn--solid" href="mailto:hallo@kastanie.wien?subject=Waiting%20list&body=District:%20%0ANumber%20of%20plants:%20">Join the waiting list by email</a>
+      <p class="hint">The button opens your email app with a ready-made message — nothing is sent until you press send yourself.</p>
+      <a class="btn btn--solid" id="wl-btn" href="mailto:hallo@kastanie.wien?subject=Waiting list">Join the waiting list by email</a>
     </div>
+    <script>
+    (function(){
+      function upd(){
+        var b=document.getElementById('bezirk').value, a=document.getElementById('anzahl').value;
+        document.getElementById('wl-btn').href='mailto:hallo@kastanie.wien?subject=Waiting list&body='+
+          encodeURIComponent('District: '+b+'\nNumber of plants: '+a);
+      }
+      document.getElementById('bezirk').addEventListener('change',upd);
+      document.getElementById('anzahl').addEventListener('change',upd);
+      upd();
+    })();
+    </script>
     <!-- ==================== END FORM SLOT ==================== -->
 
   </div>
