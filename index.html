@@ -270,6 +270,7 @@ input[type=email],select{
     <h2>Ein Pflanzenservice für Wien</h2>
     <p>Kastanie entsteht gerade. Ab dem Winter vermitteln wir <strong>Pflanzen-Checks bei Ihnen zuhause</strong>: jemand sieht sich Ihre Pflanzen an, findet heraus, was fehlt, topft um, wo es nötig ist, und sagt Ihnen, was zu tun ist.</p>
     <p>Durchgeführt wird das von <strong>Wiener Gärtnereien</strong> — Betrieben, die das seit Jahrzehnten können. Wir organisieren und vermitteln. Gegärtnert wird von Profis.</p>
+    <p>Und wenn Sie noch gar keine Pflanzen haben, planen wir Ihr <strong>grünes Zuhause</strong>: ein Gärtner prüft das Licht in Ihren Räumen, wählt Pflanzen aus, die dort wirklich überleben, und liefert und topft alles bei einem Termin.</p>
     <p>Wir starten klein: wenige Partnerbetriebe, wenige Bezirke. Deshalb die Warteliste.</p>
   </div>
 </section>
@@ -336,10 +337,19 @@ input[type=email],select{
       <div class="field">
         <label for="anzahl">Wie viele Zimmerpflanzen haben Sie ungefähr?</label>
         <select id="anzahl">
+          <option>Noch keine</option>
           <option>1–5</option>
           <option>6–15</option>
           <option>16–30</option>
           <option>mehr als 30</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fokus">Was beschäftigt Sie am meisten?</label>
+        <select id="fokus">
+          <option>Meine Pflanzen retten</option>
+          <option>Mehr Grün in meine Wohnung bringen</option>
+          <option>Pflanzenpflege, wenn ich verreise</option>
         </select>
       </div>
       <p class="hint">Der Knopf öffnet Ihr E-Mail-Programm mit einer fertigen Nachricht — abgeschickt wird erst, wenn Sie selbst auf Senden drücken.</p>
@@ -348,12 +358,13 @@ input[type=email],select{
     <script>
     (function(){
       function upd(){
-        var b=document.getElementById('bezirk').value, a=document.getElementById('anzahl').value;
+        var b=document.getElementById('bezirk').value, a=document.getElementById('anzahl').value, fo=document.getElementById('fokus').value;
         document.getElementById('wl-btn').href='mailto:hallo@kastanie.wien?subject=Warteliste&body='+
-          encodeURIComponent('Bezirk: '+b+'\nAnzahl Pflanzen: '+a);
+          encodeURIComponent('Bezirk: '+b+'\nAnzahl Pflanzen: '+a+'\nAnliegen: '+fo);
       }
       document.getElementById('bezirk').addEventListener('change',upd);
       document.getElementById('anzahl').addEventListener('change',upd);
+      document.getElementById('fokus').addEventListener('change',upd);
       upd();
     })();
     </script>

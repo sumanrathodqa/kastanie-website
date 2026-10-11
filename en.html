@@ -270,6 +270,7 @@ input[type=email],select{
     <h2>A plant care service for Vienna</h2>
     <p>Kastanie is just getting started. From this winter, we arrange <strong>plant check-ups at your home</strong>: someone looks at your plants, works out what they&rsquo;re missing, repots where needed, and tells you what to do.</p>
     <p>The work is done by <strong>Viennese nurseries</strong> — businesses that have been doing this for decades. We organise and arrange. The gardening is done by professionals.</p>
+    <p>And if you don&rsquo;t own any plants yet, we&rsquo;ll plan your <strong>green home</strong>: a gardener checks the light in your rooms, picks plants that will actually survive there, and delivers and pots everything in a single visit.</p>
     <p>We&rsquo;re starting small: a few partner businesses, a few districts. Hence the waiting list.</p>
   </div>
 </section>
@@ -336,10 +337,19 @@ input[type=email],select{
       <div class="field">
         <label for="anzahl">Roughly how many houseplants do you have?</label>
         <select id="anzahl">
+          <option>None yet</option>
           <option>1–5</option>
           <option>6–15</option>
           <option>16–30</option>
           <option>more than 30</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fokus">What matters most to you?</label>
+        <select id="fokus">
+          <option>Saving my plants</option>
+          <option>Bringing more green into my home</option>
+          <option>Plant care while I travel</option>
         </select>
       </div>
       <p class="hint">The button opens your email app with a ready-made message — nothing is sent until you press send yourself.</p>
@@ -348,12 +358,13 @@ input[type=email],select{
     <script>
     (function(){
       function upd(){
-        var b=document.getElementById('bezirk').value, a=document.getElementById('anzahl').value;
+        var b=document.getElementById('bezirk').value, a=document.getElementById('anzahl').value, fo=document.getElementById('fokus').value;
         document.getElementById('wl-btn').href='mailto:hallo@kastanie.wien?subject=Waiting list&body='+
-          encodeURIComponent('District: '+b+'\nNumber of plants: '+a);
+          encodeURIComponent('District: '+b+'\nNumber of plants: '+a+'\nFocus: '+fo);
       }
       document.getElementById('bezirk').addEventListener('change',upd);
       document.getElementById('anzahl').addEventListener('change',upd);
+      document.getElementById('fokus').addEventListener('change',upd);
       upd();
     })();
     </script>
