@@ -22,3 +22,43 @@
 .zoho-iframe-shell iframe{display:block;border:0;width:100%;height:900px;min-height:900px;background:#fff}
 .zoho-active .form-note{margin-top:.6rem}
 @media(max-width:780px){.zoho-iframe-shell{min-height:1080px}.zoho-iframe-shell iframe{height:1080px;min-height:1080px}}
+
+/* 2026-10: clearer type scale + reliable photo contact flow. */
+:root{--type-body:1.04rem;--type-h1:clamp(2.2rem,3.65vw,3.5rem);--type-h2:clamp(1.7rem,2.45vw,2.35rem)}
+body{font-size:var(--type-body);line-height:1.59}
+h1{font-size:var(--type-h1);line-height:1.13;letter-spacing:-.026em}
+h2{font-size:var(--type-h2);line-height:1.2;letter-spacing:-.018em}
+h3{font-size:1.24rem;line-height:1.26}
+.topnav a{font-size:.95rem}.language{font-size:.94rem}
+.eyebrow{font-size:.86rem;letter-spacing:.135em;font-weight:750}
+.hero{padding:48px 0 58px}
+.hero-grid{gap:3.25rem;grid-template-columns:1fr 1.04fr}
+.hero h1{max-width:560px}
+.hero-lead{font-size:1.1rem;line-height:1.56;margin:1.18rem 0 1.5rem;max-width:470px}
+.hero-photo img{aspect-ratio:1.43;object-position:66% center}
+.header-cta{font-size:.91rem}
+.btn{font-size:.99rem;line-height:1.32;min-height:48px;padding:.78rem 1.25rem}
+.trust,.no-spam,.light-small,.explain,.diag-note,.form-note,.form-help,.about,.foot,.legal-min,.mini{font-size:max(.88rem, 14px)}
+.section{padding:60px 0}
+.section-lead{font-size:1.06rem;line-height:1.62}
+.light-level .level-name,.step p{font-size:1rem}
+.light-more,.topnav a{font-weight:650}
+.bottom-cta h2{font-size:var(--type-h2)}
+.photo-contact-inline{scroll-margin-top:115px;padding:1.12rem 1.2rem;background:#f5f8f1;border:1px solid #dbe7d8;border-radius:17px;margin-top:1.3rem}
+.photo-contact-text{margin:0 0:.75rem;color:var(--forest);font-size:1rem;overflow-wrap:anywhere}
+.photo-contact-inline .btn{min-height:44px}
+.photo-contact-tip{font-size:.91rem;line-height:1.5;color:var(--muted);margin:.7rem 0 0}
+.copy-feedback{font-size:.93rem;font-weight:650;color:var(--forest);margin:.55rem 0 0;min-height:0}
+.copy-feedback:empty{display:none}
+.photo-dialog{width:min(92vw,520px);max-height:calc(100dvh - 30px);overflow-y:auto;padding:1.65rem;border:1px solid #d4e0d0;border-radius:22px;background:#fff;box-shadow:0 25px 80px rgba(22,49,31,.25);color:var(--ink)}
+.photo-dialog::backdrop{background:rgba(20,39,25,.58);backdrop-filter:blur(2px)}
+.photo-dialog-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.photo-dialog h2{font-size:clamp(1.55rem,2.8vw,2rem);line-height:1.2;margin:0 0 .7rem}
+.dialog-close{border:1px solid #dce3d9;background:#f5f6f1;border-radius:50%;font-size:1.6rem;width:40px;height:40px;flex-shrink:0;color:var(--forest);cursor:pointer;line-height:1}
+.photo-dialog p{color:var(--muted);line-height:1.54}
+.email-address{background:#f2f6ee;border:1px solid #dce6d8;border-radius:12px;padding:.9rem 1rem;margin:1rem 0;font-size:1.12rem;font-weight:700;color:var(--forest);overflow-wrap:anywhere}
+.dialog-actions{display:flex;flex-wrap:wrap;gap:.7rem}
+.photo-dialog .photo-dialog-note{font-size:.91rem;margin:.95rem 0 0}
+button:focus-visible,a:focus-visible{outline:3px solid #c8874a;outline-offset:3px}
+@media(max-width:780px){.hero-grid{grid-template-columns:1fr;gap:2rem}.hero h1{font-size:clamp(2.1rem,5.6vw,3rem)}.hero-photo img{aspect-ratio:1.45;object-position:60% center}.section{padding:50px 0}}
+@media(max-width:520px){.hero h1{font-size:clamp(2rem,8vw,2.5rem);line-height:1.15}.hero{padding:32px 0 42px}.hero-lead{font-size:1.04rem}.hero-photo img{aspect-ratio:1.13;object-position:65% center}.eyebrow{font-size:.79rem}.dialog-actions{display:grid}.dialog-actions .btn{width:100%}.photo-dialog{padding:1.2rem}.photo-contact-inline{padding:.95rem}.photo-contact-inline .cta-row{display:grid}.photo-contact-inline .btn{width:100%}.section{padding:44px 0}}
