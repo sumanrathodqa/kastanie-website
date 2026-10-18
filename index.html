@@ -151,12 +151,12 @@ input[type=email],select{
 .foot p{margin-bottom:.6rem;}
 .foot a{color:var(--muted);}
 
-.hero-illu{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:2px;margin:1.75rem 0 0;}
-.mascot{width:88px;height:auto;float:right;margin:-.25rem 0 .5rem 1rem;}
+.hero-illu{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:10px;margin:1.75rem 0 0;box-shadow:0 12px 35px rgba(30,58,37,.08);}
+.mascot{width:220px;max-width:44%;height:auto;float:right;margin:0 0 1rem 1.25rem;border-radius:10px;border:1px solid var(--line);}
 @media (min-width:900px){
   .hero-illu{width:calc(100% + 9rem);max-width:none;margin-left:-4.5rem;}
 }
-@media (max-width:480px){.mascot{width:68px;}}
+@media (max-width:480px){.mascot{width:150px;max-width:46%;}}
 .rise{opacity:0;transform:translateY(12px);animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards;}
 .rise:nth-child(2){animation-delay:.08s;}
 .rise:nth-child(3){animation-delay:.16s;}
@@ -166,9 +166,6 @@ input[type=email],select{
   *{transition:none !important;}
 }
 
-@media (min-width:900px){
-  .hero-illu{width:calc(100% + 9rem);max-width:none;margin-left:-4.5rem;}
-}
 @media (max-width:480px){
   .lockup-mark{height:46px;}
   .lockup-text{font-size:1.35rem;}
@@ -194,7 +191,10 @@ input[type=email],select{
 <section class="band band--hero">
   <div class="wrap">
     <h1 class="rise">Kein grüner Daumen?<br>Das liegt meistens<br>nicht an Ihnen.</h1>
-    <img class="hero-illu rise" src="img/pflanzen-reise.jpg" width="1600" height="479" alt="Illustration: dieselbe Pflanze an drei Orten — blühend im Gewächshaus bei 30.000 Lux, noch gut am Wohnungsfenster bei 3.000 Lux, hängend im Regal bei 200 Lux." loading="eager">
+    <picture>
+      <source media="(max-width: 640px)" srcset="img/peace-lily-hero-mobile.webp" type="image/webp" width="950" height="785">
+      <img class="hero-illu rise" src="img/peace-lily-hero.webp" width="1600" height="800" alt="Das Kastanie-Maskottchen gießt ein Einblatt (Spathiphyllum) mit weißen Hochblättern am hellen Wiener Fenster." loading="eager" decoding="async" fetchpriority="high">
+    </picture>
 
 
     <div class="light rise">
@@ -238,6 +238,24 @@ input[type=email],select{
 
 <section class="band band--quiet">
   <div class="wrap">
+    <p class="eyebrow">Ab sofort und dauerhaft kostenlos</p>
+    <h2>Foto-Diagnose</h2>
+    <img class="mascot" src="img/mascot-diagnosis-3d.webp" width="840" height="622" alt="Das Kastanie-Maskottchen untersucht mit einer Lupe das Blatt einer Zimmerpflanze." loading="lazy" decoding="async">
+    <p>Schicken Sie ein Foto Ihrer Pflanze an <a class="mail" href="mailto:hallo@kastanie.wien?subject=Foto-Diagnose">hallo@kastanie.wien</a>. Schreiben Sie kurz dazu, wo sie steht, wie oft Sie gießen und seit wann das Problem besteht.</p>
+
+    <div class="callout">
+      <p>Sie bekommen innerhalb von <strong>48 Stunden</strong> (werktags) eine Einschätzung: was der Pflanze wahrscheinlich fehlt und was Sie konkret tun können.</p>
+      <p>Kein Verkauf. Keine Rechnung. Keine Anmeldung nötig.</p>
+    </div>
+
+    <p style="font-size:.9375rem;color:var(--muted);">Ein Foto pro Anfrage, bitte — so schaffen wir es, jedem ordentlich zu antworten.</p>
+
+    <p class="en" lang="en"><span>English</span> We answer in English too — just send your photo to the same address and write to us in English.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
     <p class="eyebrow">Woran es liegt</p>
     <h2>Warum Ihre Pflanze nach dem Kauf aufgehört hat zu blühen</h2>
 
@@ -264,7 +282,7 @@ input[type=email],select{
   </div>
 </section>
 
-<section class="band">
+<section class="band band--quiet">
   <div class="wrap">
     <p class="eyebrow">Was wir vorhaben</p>
     <h2>Ein Pflanzenservice für Wien</h2>
@@ -272,24 +290,6 @@ input[type=email],select{
     <p>Durchgeführt wird das von <strong>Wiener Gärtnereien</strong> — Betrieben, die das seit Jahrzehnten können. Wir organisieren und vermitteln. Gegärtnert wird von Profis.</p>
     <p>Und wenn Sie noch gar keine Pflanzen haben, planen wir Ihr <strong>grünes Zuhause</strong>: ein Gärtner prüft das Licht in Ihren Räumen, wählt Pflanzen aus, die dort wirklich überleben, und liefert und topft alles bei einem Termin.</p>
     <p>Wir starten klein: wenige Partnerbetriebe, wenige Bezirke. Deshalb die Warteliste.</p>
-  </div>
-</section>
-
-<section class="band band--quiet">
-  <div class="wrap">
-    <p class="eyebrow">Ab sofort und dauerhaft kostenlos</p>
-    <h2>Foto-Diagnose</h2>
-    <img class="mascot" src="img/kastanie-lupe.png" width="420" height="411" alt="Kastanie-Maskottchen untersucht ein Blatt mit der Lupe" loading="lazy">
-    <p>Schicken Sie ein Foto Ihrer Pflanze an <a class="mail" href="mailto:hallo@kastanie.wien?subject=Foto-Diagnose">hallo@kastanie.wien</a>. Schreiben Sie kurz dazu, wo sie steht, wie oft Sie gießen und seit wann das Problem besteht.</p>
-
-    <div class="callout">
-      <p>Sie bekommen innerhalb von <strong>48 Stunden</strong> (werktags) eine Einschätzung: was der Pflanze wahrscheinlich fehlt und was Sie konkret tun können.</p>
-      <p>Kein Verkauf. Keine Rechnung. Keine Anmeldung nötig.</p>
-    </div>
-
-    <p style="font-size:.9375rem;color:var(--muted);">Ein Foto pro Anfrage, bitte — so schaffen wir es, jedem ordentlich zu antworten.</p>
-
-    <p class="en" lang="en"><span>English</span> We answer in English too — just send your photo to the same address and write to us in English.</p>
   </div>
 </section>
 
@@ -393,7 +393,7 @@ input[type=email],select{
     Inhaber: Suman Rathod<br>
     Dr.-Eduard-Heinl-Gasse 5/6/3, 1190 Wien<br>
     <a href="mailto:hallo@kastanie.wien">hallo@kastanie.wien</a></p>
-    <p>Firmenbuchnummer: [FN folgt] · Firmenbuchgericht: Handelsgericht Wien<br>
+    <p>Firmenbuch: Eintragung beim Handelsgericht Wien beantragt (FN wird nach Eintragung ergänzt) · GISA-Zahl: 40212098<br>
     Unternehmensgegenstand: Vermittlung von Pflanzenpflege- und Blumen-Dienstleistungen<br>
     Mitglied der Wirtschaftskammer Wien · Gewerbeordnung: <a href="https://www.ris.bka.gv.at" rel="noopener">ris.bka.gv.at</a> · Gewerbebehörde: Magistratisches Bezirksamt Wien</p>
     <p>Die Pflanzen-Checks und weiteren Leistungen werden von selbständigen Wiener Partnerbetrieben erbracht; der Vertrag über die Leistung kommt zwischen Ihnen und dem jeweiligen Betrieb zustande. Kastanie vermittelt.</p>
