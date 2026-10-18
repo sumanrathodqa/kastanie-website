@@ -1,0 +1,36 @@
+KASTANIE PRE-PUBLICATION AUDIT — 18 OCTOBER 2026
+
+FIXED IN THIS PACKAGE:
+- Both direct form links now have the correct real Zoho public href in the HTML.
+- Both Zoho forms now embed via a plain HTML iframe. They no longer rely on JavaScript setup.
+- Removed the misleading "being connected" text and the obsolete mailto fallback form.
+- Direct form URL remains visible if the embed fails or a browser blocks it.
+- Replaced four duplicate sun symbols with sun/window/inner room/house outline icons.
+- Updated privacy pages with cautious, accurate information about Zoho EU hosting
+  and possible support access from outside the EU.
+- Preserved premium 3D mascot, photo-contact flow, languages, and original business claims.
+
+ACTION REQUIRED INSIDE ZOHO FORMS — not changeable from website files:
+1. BOTH forms: add OPTIONAL single-select field:
+   German: 'Wie viele Zimmerpflanzen haben Sie ungefähr?'
+   Options: 'Noch keine', '1–5', '6–15', '16–30', 'Mehr als 30'
+   English: 'Roughly how many houseplants do you have?'
+   Options: 'None yet', '1–5', '6–15', '16–30', 'More than 30'
+2. Confirm the existing interest question remains OPTIONAL in both.
+3. English Zoho form: change the consent-text privacy link to
+   https://kastanie.wien/privacy.html (currently points to German policy).
+4. German Zoho form: rename button 'Submit' to 'Auf die Warteliste'.
+   English form: rename to 'Join the waiting list'.
+5. In signed-in Zoho Forms, confirm application URL is *.zoho.eu and review
+   the data processing agreement/account region.
+6. Do not connect Google Analytics, Tag Manager, Meta Pixel, UTM or advanced
+   referrer tracking unless you deliberately update your consent/privacy setup.
+7. In Zoho Forms: Share > Embed > Embed Settings > Embed Location: use
+   'Anywhere' or allow kastanie.wien, otherwise iframe can be blocked.
+8. After publishing, test one real submission in each form on desktop and mobile
+   and verify its record appears in Zoho Forms. No test was sent here.
+
+The current hosted live site may not yet match the ZIP. This package does NOT
+publish to GitHub Pages. Backup before replacing files, then commit/push.
+The 3D 'light journey' is still a separate future visual task; no unverified
+botanical illustration was inserted.
