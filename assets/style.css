@@ -69,3 +69,33 @@ button:focus-visible,a:focus-visible{outline:3px solid #c8874a;outline-offset:3p
 /* The two public Zoho iframes and their direct links render without client JavaScript. */
 .zoho-iframe-shell{background:#fff;}
 .zoho-iframe-shell iframe{border:0;}
+
+
+/* 2026-10-19: explain the planned paid service and make the waiting-list value clear. */
+.hero-service-note{font-size:.86rem;color:#516451;margin:.8rem 0 .25rem;line-height:1.55;max-width:520px}
+.service-section{background:#fff;scroll-margin-top:90px;padding:70px 0 62px}
+.service-heading-row{display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;margin-bottom:1.6rem}
+.service-intro{max-width:740px}.service-intro .section-lead{margin-bottom:0}
+.service-status{display:flex;align-items:center;gap:.5rem;flex:0 1 240px;min-width:200px;border:1px solid #dce6d6;border-radius:14px;background:#f1f6ec;color:#325b37;padding:.8rem 1rem;font-size:.88rem;line-height:1.4;font-weight:700}
+.status-dot{width:9px;height:9px;flex:0 0 9px;border-radius:50%;background:#a97948}
+.service-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.service-card{background:#fbfaf6;border:1px solid #e5e4da;border-radius:17px;overflow:hidden;min-width:0;box-shadow:0 8px 22px rgba(31,57,38,.055)}
+.service-card img{width:100%;aspect-ratio:1.5;object-fit:cover;background:#e8e9df}
+.service-card-body{padding:1rem 1rem 1.12rem}
+.service-card h3{font:750 1.02rem/1.35 system-ui,-apple-system,'Segoe UI',sans-serif;letter-spacing:0;margin:0 0 .35rem;color:var(--dark)}
+.service-card p{font-size:.9rem;line-height:1.49;color:var(--muted);margin:0}
+.service-foot{margin-top:1.6rem;padding:1.2rem 1.4rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;background:#eff2e9;border:1px solid #e0e6d8;border-radius:17px}
+.service-foot p{max-width:650px;font-size:.95rem;color:#536553;margin:0;line-height:1.6}
+.service-foot .btn{flex:0 0 auto;max-width:360px;text-align:center}
+.wait-section{background:#f2f3eb;scroll-margin-top:90px}
+.wait-grid{grid-template-columns:.88fr 1.12fr;align-items:start;gap:3.3rem}
+.wait-copy .section-lead{max-width:600px}
+.wait-steps{padding:0;margin:1.45rem 0 0;display:grid;gap:.7rem;list-style:none}
+.wait-steps li{display:flex;align-items:flex-start;gap:.7rem;line-height:1.45;font-size:.98rem;color:#405747}
+.wait-step-number{display:inline-flex;align-items:center;justify-content:center;background:#deeadc;color:var(--forest);width:29px;height:29px;flex:0 0 29px;border-radius:50%;font-size:.75rem;font-weight:800}
+.wait-no-spam{margin:1.15rem 0 0;color:var(--forest);font-weight:750;font-size:.9rem}
+.form-card h3{margin-bottom:.65rem}.form-card .form-help{margin:0 0 1rem}
+.form-note-paid{margin:0 0 1rem!important;padding:.7rem .8rem;border-radius:10px;background:#f0f4eb;color:#526653;font-weight:600;font-size:.86rem}
+@media(max-width:1000px){.service-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.service-heading-row{flex-direction:column;gap:.9rem}.service-status{flex:none;min-width:0}.service-foot{align-items:flex-start;flex-direction:column}.wait-grid{gap:1.5rem}}
+@media(max-width:780px){.service-section{padding:52px 0}.service-cards{gap:.75rem}.wait-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.service-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.service-card-body{padding:.8rem .75rem}.service-card h3{font-size:.91rem}.service-card p{font-size:.82rem}.service-section{padding:45px 0}.service-foot{padding:1rem}.service-foot .btn{width:100%;font-size:.9rem}.wait-steps li{font-size:.93rem}.hero-service-note{font-size:.83rem}}
