@@ -100,17 +100,6 @@ button:focus-visible,a:focus-visible{outline:3px solid #c8874a;outline-offset:3p
 @media(max-width:780px){.service-section{padding:52px 0}.service-cards{gap:.75rem}.wait-grid{grid-template-columns:1fr}}
 @media(max-width:520px){.service-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.service-card-body{padding:.8rem .75rem}.service-card h3{font-size:.91rem}.service-card p{font-size:.82rem}.service-section{padding:45px 0}.service-foot{padding:1rem}.service-foot .btn{width:100%;font-size:.9rem}.wait-steps li{font-size:.93rem}.hero-service-note{font-size:.83rem}}
 
-
-/* Mobile spacing refinement: avoid two large images back-to-back */
-@media(max-width:780px){
-  .diagnosis-grid{gap:1.5rem;}
-  .diagnosis-copy{order:1;}
-  .diagnosis-photo{order:2;max-width:640px;margin:0 auto;}
-  .diagnosis-photo img{aspect-ratio:1.32;}
-}
-@media(max-width:520px){
-  .diagnosis{border-top:1px solid var(--line);}
-  .diagnosis-copy{margin-bottom:.25rem;}
-  .diagnosis-photo{margin-top:.35rem;max-width:100%;}
-  .diagnosis-photo img{aspect-ratio:1.26;border-radius:20px;}
-}
+/* Mobile content-first layout: separate the two 3D illustration blocks */
+@media(max-width:780px){.diagnosis-grid{gap:1.5rem}.diagnosis-copy{order:1}.diagnosis-photo{order:2;max-width:640px;margin:0 auto}.diagnosis-photo img{aspect-ratio:1.32}}
+@media(max-width:520px){.diagnosis{border-top:1px solid var(--line)}.diagnosis-copy{margin-bottom:.25rem}.diagnosis-photo{margin-top:.35rem;max-width:100%}.diagnosis-photo img{aspect-ratio:1.26;border-radius:20px}}
