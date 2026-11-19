@@ -1,0 +1,30 @@
+KASTANIE — FINAL BILINGUAL WEBSITE (19 NOVEMBER 2026)
+
+WHAT IS INCLUDED
+- index.html: German landing page
+- en.html: English landing page
+- German and English legal pages, favicon, logo, CSS and JavaScript
+- Optimized real plant photography, including original clean Calathea photo
+- Existing photo-contact dialog and existing Zoho waiting-list forms
+
+VISUAL DIRECTION
+Kind, warm and inspiring: natural photography, gentle colors, and simple, reassuring language.
+The hero label is intentionally small and placed near the bottom of the photo.
+Main headlines stay in readable HTML, not inside the photograph:
+DE: Pflanzen verstehen statt raten
+EN: Understanding plants, not guessing
+The photo proportions are preserved with mild cropping and the peace lily blooms remain visible in the service card.
+
+TO PUBLISH
+1. Back up your current website files.
+2. Unzip this archive. Copy its CONTENTS to the root of your website repository (where index.html belongs).
+3. Do not rename the asset directories or CNAME file.
+4. Deploy through your existing website hosting process (for example, your current GitHub Pages workflow).
+5. Refresh the live site (hard refresh if necessary).
+6. Check index.html, en.html, the mobile layout, language links, photo contact dialog and both Zoho forms.
+7. Check the privacy/legal information and licensing/attribution terms for all supplied stock photos.
+
+IMPORTANT
+This ZIP is a website package, not an automatic deployment.
+The external Zoho forms and delivery of email enquiries need live-device/live-site testing.
+Preserve the current form URLs unless you update your Zoho Forms configuration.
